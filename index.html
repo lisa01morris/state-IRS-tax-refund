@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rhode Island Tax Refund Tracker</title>
-    <!-- Tailwind CSS for modern, scannable styling -->
     <script src="https://tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 font-sans min-h-screen flex items-center justify-center p-4">
 
     <div class="max-w-2xl w-full bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
-        <!-- Header -->
         <div class="bg-blue-800 p-6 text-white text-center">
             <h1 class="text-xl font-bold tracking-wide">Rhode Island Division of Taxation</h1>
-            <p class="text-sm opacity-90 mt-1">Official IRS & State Refund Status Tracker</p>
+            <p class="text-sm opacity-90 mt-1">Official IRS &amp; State Refund Status Tracker</p>
         </div>
 
         <div class="p-6 space-y-6">
-            <!-- Status Badge -->
             <div class="flex items-center justify-between border-b border-gray-100 pb-4">
                 <div>
                     <p class="text-sm text-gray-500 font-medium">Current Status</p>
@@ -28,7 +25,6 @@
                 </span>
             </div>
 
-            <!-- Summary Table -->
             <div>
                 <h3 class="text-sm font-semibold text-gray-700 mb-2">Refund Breakdown Summary</h3>
                 <div class="bg-gray-50 rounded-lg p-4 grid grid-cols-3 gap-4 text-center">
@@ -47,12 +43,9 @@
                 </div>
             </div>
 
-            <!-- 3-Step Completion Tasks -->
             <div>
                 <h3 class="text-sm font-semibold text-gray-700 mb-4">Required Action Items to Complete Disbursement</h3>
                 <div class="relative pl-6 border-l-2 border-blue-500 space-y-6">
-                    
-                    <!-- Step 1 -->
                     <div class="relative">
                         <div class="absolute -left-[31px] bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold ring-4 ring-white">1</div>
                         <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
@@ -64,7 +57,6 @@
                         </div>
                     </div>
 
-                    <!-- Step 2 -->
                     <div class="relative">
                         <div class="absolute -left-[31px] bg-gray-300 text-gray-600 rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold ring-4 ring-white">2</div>
                         <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm opacity-75">
@@ -76,7 +68,6 @@
                         </div>
                     </div>
 
-                    <!-- Step 3 -->
                     <div class="relative">
                         <div class="absolute -left-[31px] bg-gray-300 text-gray-600 rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold ring-4 ring-white">3</div>
                         <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm opacity-75">
@@ -90,12 +81,10 @@
 
                 </div>
             </div>
-            
         </div>
-        
-        <!-- Footer Info -->
+
         <div class="bg-gray-50 p-4 border-t border-gray-100 text-center text-[11px] text-gray-400">
-            For assistance, contact the [Rhode Island Division of Taxation](https://tax.ri.gov/online-services/wheres-my-refund). Security code: RI-IRS-7600A.
+            For assistance, contact the <a href="https://tax.ri.gov/online-services/wheres-my-refund" class="text-blue-600 underline">Rhode Island Division of Taxation</a>. Security code: RI-IRS-7600A.
         </div>
     </div>
 
