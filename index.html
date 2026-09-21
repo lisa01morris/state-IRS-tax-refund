@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhode Island Tax Refund Tracker</title>
+    <!-- Tailwind CSS for modern, scannable styling -->
+    <script src="https://tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-2xl w-full bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+        <!-- Header -->
+        <div class="bg-blue-800 p-6 text-white text-center">
+            <h1 class="text-xl font-bold tracking-wide">Rhode Island Division of Taxation</h1>
+            <p class="text-sm opacity-90 mt-1">Official IRS & State Refund Status Tracker</p>
+        </div>
+
+        <div class="p-6 space-y-6">
+            <!-- Status Badge -->
+            <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+                <div>
+                    <p class="text-sm text-gray-500 font-medium">Current Status</p>
+                    <p class="text-xs text-gray-400">Tax Year: 2026</p>
+                </div>
+                <span class="inline-flex items-center bg-green-100 text-green-800 text-sm font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                    ● Approved
+                </span>
+            </div>
+
+            <!-- Summary Table -->
+            <div>
+                <h3 class="text-sm font-semibold text-gray-700 mb-2">Refund Breakdown Summary</h3>
+                <div class="bg-gray-50 rounded-lg p-4 grid grid-cols-3 gap-4 text-center">
+                    <div>
+                        <span class="text-xs text-gray-500 block">Initial Milestone</span>
+                        <span class="text-lg font-bold text-gray-800">$1,500</span>
+                    </div>
+                    <div>
+                        <span class="text-xs text-gray-500 block">Processing Credit</span>
+                        <span class="text-lg font-bold text-gray-800">$3,000</span>
+                    </div>
+                    <div class="border-l border-gray-200">
+                        <span class="text-xs text-blue-600 font-semibold block">Total Approved</span>
+                        <span class="text-lg font-extrabold text-blue-800">$7,600</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3-Step Completion Tasks -->
+            <div>
+                <h3 class="text-sm font-semibold text-gray-700 mb-4">Required Action Items to Complete Disbursement</h3>
+                <div class="relative pl-6 border-l-2 border-blue-500 space-y-6">
+                    
+                    <!-- Step 1 -->
+                    <div class="relative">
+                        <div class="absolute -left-[31px] bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold ring-4 ring-white">1</div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <h4 class="font-bold text-gray-800 text-sm">Release Initial Milestone</h4>
+                                <span class="text-xs font-semibold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">Pending Action</span>
+                            </div>
+                            <p class="text-xs text-gray-600">Verification of identity details required to trigger the core base allowance of <strong class="text-gray-900">$1,500</strong>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative">
+                        <div class="absolute -left-[31px] bg-gray-300 text-gray-600 rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold ring-4 ring-white">2</div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm opacity-75">
+                            <div class="flex justify-between items-center mb-1">
+                                <h4 class="font-bold text-gray-500 text-sm">Process State Tax Credit</h4>
+                                <span class="text-xs font-semibold text-gray-400 bg-gray-50 px-2 py-0.5 rounded">Locked</span>
+                            </div>
+                            <p class="text-xs text-gray-500">Unlocks automatically upon Step 1 confirmation. Allocates state deductions totaling <strong class="text-gray-700">$3,000</strong>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative">
+                        <div class="absolute -left-[31px] bg-gray-300 text-gray-600 rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold ring-4 ring-white">3</div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm opacity-75">
+                            <div class="flex justify-between items-center mb-1">
+                                <h4 class="font-bold text-gray-500 text-sm">Final Treasury Clearance</h4>
+                                <span class="text-xs font-semibold text-gray-400 bg-gray-50 px-2 py-0.5 rounded">Locked</span>
+                            </div>
+                            <p class="text-xs text-gray-500">Authorizes final release of the accumulated <strong class="text-gray-700">$7,600</strong> sum directly to the linked direct deposit bank account.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Footer Info -->
+        <div class="bg-gray-50 p-4 border-t border-gray-100 text-center text-[11px] text-gray-400">
+            For assistance, contact the [Rhode Island Division of Taxation](https://tax.ri.gov/online-services/wheres-my-refund). Security code: RI-IRS-7600A.
+        </div>
+    </div>
+
+</body>
+</html>
