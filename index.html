@@ -1,92 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhode Island Tax Refund Tracker</title>
-    <script src="https://tailwindcss.com"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A fictional Rhode Island and IRS tax refund tracker interface demo.">
+  <title>Tax Refund Tracker Demo</title>
+  <script src="https://tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 font-sans min-h-screen flex items-center justify-center p-4">
+<body class="min-h-screen bg-slate-100 text-slate-900 antialiased">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-3 focus:text-blue-900 focus:shadow-lg">
+    Skip to main content
+  </a>
 
-    <div class="max-w-2xl w-full bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
-        <div class="bg-blue-800 p-6 text-white text-center">
-            <h1 class="text-xl font-bold tracking-wide">Rhode Island Division of Taxation</h1>
-            <p class="text-sm opacity-90 mt-1">Official IRS &amp; State Refund Status Tracker</p>
+  <header class="bg-blue-950 text-white">
+    <div class="mx-auto max-w-5xl px-4 py-5 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-200">Interface demonstration</p>
+          <h1 class="mt-1 text-xl font-bold tracking-tight sm:text-2xl">State &amp; IRS Tax Refund Tracker</h1>
         </div>
+        <span class="inline-flex w-fit items-center rounded-full border border-amber-300/60 bg-amber-400/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-amber-100">
+          Fictional demo
+        </span>
+      </div>
+    </div>
+  </header>
 
-        <div class="p-6 space-y-6">
-            <div class="flex items-center justify-between border-b border-gray-100 pb-4">
-                <div>
-                    <p class="text-sm text-gray-500 font-medium">Current Status</p>
-                    <p class="text-xs text-gray-400">Tax Year: 2026</p>
-                </div>
-                <span class="inline-flex items-center bg-green-100 text-green-800 text-sm font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                    ● Approved
-                </span>
-            </div>
-
-            <div>
-                <h3 class="text-sm font-semibold text-gray-700 mb-2">Refund Breakdown Summary</h3>
-                <div class="bg-gray-50 rounded-lg p-4 grid grid-cols-3 gap-4 text-center">
-                    <div>
-                        <span class="text-xs text-gray-500 block">Initial Milestone</span>
-                        <span class="text-lg font-bold text-gray-800">$1,500</span>
-                    </div>
-                    <div>
-                        <span class="text-xs text-gray-500 block">Processing Credit</span>
-                        <span class="text-lg font-bold text-gray-800">$3,000</span>
-                    </div>
-                    <div class="border-l border-gray-200">
-                        <span class="text-xs text-blue-600 font-semibold block">Total Approved</span>
-                        <span class="text-lg font-extrabold text-blue-800">$7,600</span>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h3 class="text-sm font-semibold text-gray-700 mb-4">Required Action Items to Complete Disbursement</h3>
-                <div class="relative pl-6 border-l-2 border-blue-500 space-y-6">
-                    <div class="relative">
-                        <div class="absolute -left-[31px] bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold ring-4 ring-white">1</div>
-                        <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
-                            <div class="flex justify-between items-center mb-1">
-                                <h4 class="font-bold text-gray-800 text-sm">Release Initial Milestone</h4>
-                                <span class="text-xs font-semibold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">Pending Action</span>
-                            </div>
-                            <p class="text-xs text-gray-600">Verification of identity details required to trigger the core base allowance of <strong class="text-gray-900">$1,500</strong>.</p>
-                        </div>
-                    </div>
-
-                    <div class="relative">
-                        <div class="absolute -left-[31px] bg-gray-300 text-gray-600 rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold ring-4 ring-white">2</div>
-                        <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm opacity-75">
-                            <div class="flex justify-between items-center mb-1">
-                                <h4 class="font-bold text-gray-500 text-sm">Process State Tax Credit</h4>
-                                <span class="text-xs font-semibold text-gray-400 bg-gray-50 px-2 py-0.5 rounded">Locked</span>
-                            </div>
-                            <p class="text-xs text-gray-500">Unlocks automatically upon Step 1 confirmation. Allocates state deductions totaling <strong class="text-gray-700">$3,000</strong>.</p>
-                        </div>
-                    </div>
-
-                    <div class="relative">
-                        <div class="absolute -left-[31px] bg-gray-300 text-gray-600 rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold ring-4 ring-white">3</div>
-                        <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm opacity-75">
-                            <div class="flex justify-between items-center mb-1">
-                                <h4 class="font-bold text-gray-500 text-sm">Final Treasury Clearance</h4>
-                                <span class="text-xs font-semibold text-gray-400 bg-gray-50 px-2 py-0.5 rounded">Locked</span>
-                            </div>
-                            <p class="text-xs text-gray-500">Authorizes final release of the accumulated <strong class="text-gray-700">$7,600</strong> sum directly to the linked direct deposit bank account.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-gray-50 p-4 border-t border-gray-100 text-center text-[11px] text-gray-400">
-            For assistance, contact the <a href="https://tax.ri.gov/online-services/wheres-my-refund" class="text-blue-600 underline">Rhode Island Division of Taxation</a>. Security code: RI-IRS-7600A.
-        </div>
+  <main id="main-content" class="mx-auto max-w-5xl px-4 py-6 sm:px-6 sm:py-10 lg:px-8">
+    <div role="note" class="mb-6 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm leading-6 text-amber-950">
+      <p class="font-bold">Demo only — not an official tax service</p>
+      <p>This interface does not verify tax records, request identity details, or connect to a bank account. For a real refund, use the official government websites you already trust.</p>
     </div>
 
+    <section aria-labelledby="status-heading" class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div class="bg-blue-900 px-5 py-7 text-white sm:px-8">
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-sm font-medium text-blue-200">Sample record · Tax year 2026</p>
+            <h2 id="status-heading" class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">Refund status overview</h2>
+          </div>
+          <div aria-label="Sample refund status: Approved" class="inline-flex w-fit items-center gap-2 rounded-full bg-emerald-100 px-4 py-2 text-sm font-extrabold uppercase tracking-wide text-emerald-950">
+            <span aria-hidden="true">●</span> Approved
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-8 p-5 sm:p-8">
+        <section aria-labelledby="breakdown-heading">
+          <div class="mb-3 flex items-baseline justify-between gap-4">
+            <h3 id="breakdown-heading" class="text-lg font-bold text-slate-900">Refund breakdown</h3>
+            <p class="text-sm text-slate-600">Illustrative amounts</p>
+          </div>
+          <dl class="grid gap-3 sm:grid-cols-3">
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+              <dt class="text-sm font-medium text-slate-600">Initial milestone</dt>
+              <dd class="mt-1 text-2xl font-extrabold text-slate-950">$1,500</dd>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+              <dt class="text-sm font-medium text-slate-600">Processing credit</dt>
+              <dd class="mt-1 text-2xl font-extrabold text-slate-950">$3,000</dd>
+            </div>
+            <div class="rounded-xl border-2 border-blue-700 bg-blue-50 p-4">
+              <dt class="text-sm font-bold text-blue-900">Total approved</dt>
+              <dd class="mt-1 text-2xl font-extrabold text-blue-950">$7,600</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section aria-labelledby="steps-heading">
+          <div class="mb-5">
+            <h3 id="steps-heading" class="text-lg font-bold text-slate-900">Three-step release sequence</h3>
+            <p class="mt-1 text-sm leading-6 text-slate-600">This simulated sequence demonstrates how dependent actions can be presented without collecting sensitive information.</p>
+          </div>
+
+          <ol class="relative space-y-4 border-l-2 border-blue-200 pl-6 sm:space-y-5">
+            <li>
+              <article class="relative rounded-xl border-2 border-blue-700 bg-white p-5 shadow-sm">
+                <span aria-hidden="true" class="absolute -left-[2.05rem] top-5 flex h-7 w-7 items-center justify-center rounded-full bg-blue-700 text-sm font-bold text-white ring-4 ring-white">1</span>
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <p class="text-sm font-bold uppercase tracking-wide text-blue-800">Step 1 · $1,500</p>
+                    <h4 class="mt-1 text-lg font-bold text-slate-950">Identity details verification</h4>
+                  </div>
+                  <span id="step-1-status" class="w-fit rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-950">Action required</span>
+                </div>
+                <p class="mt-3 text-sm leading-6 text-slate-700">Verify core personal data in the official tax service to release the base allowance milestone of <strong>$1,500</strong>. This demo intentionally provides no form for entering that data.</p>
+                <button type="button" data-action="demo-verify" class="mt-4 rounded-lg bg-blue-800 px-4 py-2.5 text-sm font-bold text-white hover:bg-blue-950 focus:outline-none focus:ring-4 focus:ring-blue-200">Simulate completion</button>
+              </article>
+            </li>
+
+            <li>
+              <article id="step-2" class="relative rounded-xl border border-slate-200 bg-slate-50 p-5 opacity-90">
+                <span aria-hidden="true" class="absolute -left-[2.05rem] top-5 flex h-7 w-7 items-center justify-center rounded-full bg-slate-400 text-sm font-bold text-white ring-4 ring-white">2</span>
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <p class="text-sm font-bold uppercase tracking-wide text-slate-600">Step 2 · $3,000</p>
+                    <h4 class="mt-1 text-lg font-bold text-slate-800">State tax credit allocation</h4>
+                  </div>
+                  <span id="step-2-status" class="w-fit rounded-full bg-slate-200 px-3 py-1 text-xs font-bold text-slate-700">Locked</span>
+                </div>
+                <p class="mt-3 text-sm leading-6 text-slate-600">After Step 1 is complete, the simulated workflow allocates state-level deductions and credits totaling <strong>$3,000</strong>.</p>
+              </article>
+            </li>
+
+            <li>
+              <article id="step-3" class="relative rounded-xl border border-slate-200 bg-slate-50 p-5 opacity-90">
+                <span aria-hidden="true" class="absolute -left-[2.05rem] top-5 flex h-7 w-7 items-center justify-center rounded-full bg-slate-400 text-sm font-bold text-white ring-4 ring-white">3</span>
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <p class="text-sm font-bold uppercase tracking-wide text-slate-600">Step 3 · $7,600</p>
+                    <h4 class="mt-1 text-lg font-bold text-slate-800">Final treasury clearance</h4>
+                  </div>
+                  <span id="step-3-status" class="w-fit rounded-full bg-slate-200 px-3 py-1 text-xs font-bold text-slate-700">Locked</span>
+                </div>
+                <p class="mt-3 text-sm leading-6 text-slate-600">After Step 2 is complete, the simulated workflow triggers the final release of the combined <strong>$7,600</strong>. No bank-account information is requested or stored by this demo.</p>
+              </article>
+            </li>
+          </ol>
+          <p id="live-message" class="mt-4 min-h-6 text-sm font-semibold text-emerald-800" role="status" aria-live="polite"></p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mx-auto max-w-5xl px-4 pb-8 text-center text-xs leading-5 text-slate-600 sm:px-6 lg:px-8">
+    Fictional UI demo. Never submit sensitive tax or banking information to an unverified website.
+  </footer>
+
+  <script>
+    (() => {
+      const button = document.querySelector('[data-action="demo-verify"]');
+      const message = document.querySelector('#live-message');
+      const step1Status = document.querySelector('#step-1-status');
+      const step2Status = document.querySelector('#step-2-status');
+      const step3Status = document.querySelector('#step-3-status');
+      const step2 = document.querySelector('#step-2');
+      const step3 = document.querySelector('#step-3');
+
+      button.addEventListener('click', () => {
+        button.disabled = true;
+        button.textContent = 'Completed in demo';
+        button.classList.add('cursor-not-allowed', 'bg-emerald-700');
+        button.classList.remove('bg-blue-800', 'hover:bg-blue-950');
+        step1Status.textContent = 'Complete';
+        step1Status.className = 'w-fit rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-950';
+        step2Status.textContent = 'Available in demo';
+        step2Status.className = 'w-fit rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-950';
+        step3Status.textContent = 'Locked';
+        step2.classList.remove('bg-slate-50', 'opacity-90');
+        step2.classList.add('border-blue-300', 'bg-blue-50');
+        message.textContent = 'Demo update: Step 1 is complete. Step 2 is now available.';
+      });
+
+      step2.addEventListener('click', () => {
+        if (!button.disabled) return;
+        step2Status.textContent = 'Complete in demo';
+        step2Status.className = 'w-fit rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-950';
+        step3Status.textContent = 'Available in demo';
+        step3Status.className = 'w-fit rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-950';
+        step3.classList.remove('bg-slate-50', 'opacity-90');
+        step3.classList.add('border-blue-300', 'bg-blue-50');
+        message.textContent = 'Demo update: Step 2 is complete. Step 3 is now available.';
+      });
+    })();
+  </script>
 </body>
 </html>
