@@ -89,11 +89,15 @@
               <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <p class="text-xs font-bold uppercase tracking-wide text-slate-600">Step 3</p>
-                  <h3 class="mt-1 text-base font-bold text-slate-800">Simulation complete</h3>
+                  <h3 class="mt-1 text-base font-bold text-slate-800">Payment option demonstration</h3>
                 </div>
                 <span class="w-fit rounded-full bg-slate-200 px-3 py-1 text-xs font-bold text-slate-700">No transaction</span>
               </div>
-              <p class="mt-3 text-sm leading-6 text-slate-600">This simulator ends without requesting payment details, sending email, or initiating any payout or transfer.</p>
+              <p class="mt-3 text-sm leading-6 text-slate-600">Select the button to preview a payment-option state. This demo does not request payment details, send email, or initiate a payout or transfer.</p>
+              <button id="simulate-bank-transfer" type="button" class="mt-4 rounded-lg bg-blue-700 px-4 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-200">
+                Simulate bank-transfer option
+              </button>
+              <p id="status-message" class="mt-3 min-h-5 text-sm font-semibold text-emerald-800" role="status" aria-live="polite"></p>
             </li>
           </ol>
         </section>
@@ -104,5 +108,18 @@
       </footer>
     </div>
   </div>
+
+  <script>
+    const button = document.getElementById('simulate-bank-transfer');
+    const message = document.getElementById('status-message');
+
+    button.addEventListener('click', () => {
+      button.disabled = true;
+      button.textContent = 'Option simulated';
+      button.classList.remove('bg-blue-700', 'hover:bg-blue-800');
+      button.classList.add('cursor-not-allowed', 'bg-emerald-600');
+      message.textContent = 'Simulation selected: bank transfer. No email was sent and no transaction was initiated.';
+    });
+  </script>
 </body>
 </html>
