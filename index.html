@@ -1,168 +1,208 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A fictional Rhode Island and IRS tax refund tracker interface demo.">
-  <title>Tax Refund Tracker Demo</title>
-  <script src="https://tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rhode Island State & IRS Tax Refund Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen bg-slate-100 text-slate-900 antialiased">
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-3 focus:text-blue-900 focus:shadow-lg">
+<body class="min-h-screen bg-slate-100 text-slate-800 antialiased">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-blue-900 focus:shadow-lg">
     Skip to main content
   </a>
 
-  <header class="bg-blue-950 text-white">
-    <div class="mx-auto max-w-5xl px-4 py-5 sm:px-6 lg:px-8">
-      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-200">Interface demonstration</p>
-          <h1 class="mt-1 text-xl font-bold tracking-tight sm:text-2xl">State &amp; IRS Tax Refund Tracker</h1>
-        </div>
-        <span class="inline-flex w-fit items-center rounded-full border border-amber-300/60 bg-amber-400/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-amber-100">
-          Fictional demo
-        </span>
-      </div>
-    </div>
-  </header>
+  <div class="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
+    <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <header class="border-b border-amber-200 bg-amber-50 px-5 py-4 text-center sm:px-8">
+        <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-amber-800">Educational Simulation Only</p>
+        <p class="mt-1 text-xs leading-5 text-amber-700">
+          This is a non-functional demo interface. It does not process live records, collect personal data, or connect to any state network.
+        </p>
+      </header>
 
-  <main id="main-content" class="mx-auto max-w-5xl px-4 py-6 sm:px-6 sm:py-10 lg:px-8">
-    <div role="note" class="mb-6 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm leading-6 text-amber-950">
-      <p class="font-bold">Demo only — not an official tax service</p>
-      <p>This interface does not verify tax records, request identity details, or connect to a bank account. For a real refund, use the official government websites you already trust.</p>
-    </div>
-
-    <section aria-labelledby="status-heading" class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div class="bg-blue-900 px-5 py-7 text-white sm:px-8">
-        <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+      <main id="main-content" class="p-5 sm:p-8">
+        <div class="mb-7 flex flex-col gap-4 border-b border-slate-200 pb-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p class="text-sm font-medium text-blue-200">Sample record · Tax year 2026</p>
-            <h2 id="status-heading" class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">Refund status overview</h2>
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Sample Record • Tax Year 2026</p>
+            <h1 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">Rhode Island Tax Refund Tracker</h1>
           </div>
-          <div aria-label="Sample refund status: Approved" class="inline-flex w-fit items-center gap-2 rounded-full bg-emerald-100 px-4 py-2 text-sm font-extrabold uppercase tracking-wide text-emerald-950">
-            <span aria-hidden="true">●</span> Approved
-          </div>
+          <span id="global-status" class="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1.5 text-sm font-bold text-emerald-900">
+            <span aria-hidden="true" class="mr-2 text-base">●</span>
+            Approved
+          </span>
         </div>
-      </div>
 
-      <div class="space-y-8 p-5 sm:p-8">
-        <section aria-labelledby="breakdown-heading">
-          <div class="mb-3 flex items-baseline justify-between gap-4">
-            <h3 id="breakdown-heading" class="text-lg font-bold text-slate-900">Refund breakdown</h3>
-            <p class="text-sm text-slate-600">Illustrative amounts</p>
-          </div>
-          <dl class="grid gap-3 sm:grid-cols-3">
+        <section aria-labelledby="milestone-heading" class="mb-8">
+          <h2 id="milestone-heading" class="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Refund Breakdown</h2>
+          <div class="grid gap-3 sm:grid-cols-3">
             <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-              <dt class="text-sm font-medium text-slate-600">Initial milestone</dt>
-              <dd class="mt-1 text-2xl font-extrabold text-slate-950">$1,500</dd>
+              <p class="text-xs font-medium uppercase tracking-wide text-slate-500">Initial Milestone</p>
+              <p class="mt-2 text-2xl font-extrabold text-slate-900">$1,500</p>
             </div>
             <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-              <dt class="text-sm font-medium text-slate-600">Processing credit</dt>
-              <dd class="mt-1 text-2xl font-extrabold text-slate-950">$3,000</dd>
+              <p class="text-xs font-medium uppercase tracking-wide text-slate-500">Processing Credit</p>
+              <p class="mt-2 text-2xl font-extrabold text-slate-900">$3,000</p>
             </div>
             <div class="rounded-xl border-2 border-blue-700 bg-blue-50 p-4">
-              <dt class="text-sm font-bold text-blue-900">Total approved</dt>
-              <dd class="mt-1 text-2xl font-extrabold text-blue-950">$7,600</dd>
+              <p class="text-xs font-bold uppercase tracking-wide text-blue-900">Total Approved</p>
+              <p class="mt-2 text-2xl font-extrabold text-blue-950">$7,600</p>
             </div>
-          </dl>
+          </div>
         </section>
 
-        <section aria-labelledby="steps-heading">
+        <section aria-labelledby="timeline-heading">
           <div class="mb-5">
-            <h3 id="steps-heading" class="text-lg font-bold text-slate-900">Three-step release sequence</h3>
-            <p class="mt-1 text-sm leading-6 text-slate-600">This simulated sequence demonstrates how dependent actions can be presented without collecting sensitive information.</p>
+            <h2 id="timeline-heading" class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Required Sequential Verification Tasks</h2>
           </div>
 
-          <ol class="relative space-y-4 border-l-2 border-blue-200 pl-6 sm:space-y-5">
-            <li>
-              <article class="relative rounded-xl border-2 border-blue-700 bg-white p-5 shadow-sm">
-                <span aria-hidden="true" class="absolute -left-[2.05rem] top-5 flex h-7 w-7 items-center justify-center rounded-full bg-blue-700 text-sm font-bold text-white ring-4 ring-white">1</span>
-                <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                  <div>
-                    <p class="text-sm font-bold uppercase tracking-wide text-blue-800">Step 1 · $1,500</p>
-                    <h4 class="mt-1 text-lg font-bold text-slate-950">Identity details verification</h4>
+          <ol class="space-y-5">
+            <li id="step-1" class="relative">
+              <div class="absolute left-4 top-8 h-[calc(100%+1.25rem)] w-0.5 bg-slate-200" aria-hidden="true"></div>
+              <div class="flex gap-4">
+                <div id="icon-1" class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full bg-blue-700 text-sm font-bold text-white ring-4 ring-white">1</div>
+                <div class="min-w-0 flex-1 rounded-xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
+                  <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <h3 class="text-base font-bold text-slate-900">Identity &amp; Address Baseline</h3>
+                      <p class="mt-1 text-xs font-bold uppercase tracking-wide text-blue-700">$1,500 Segment</p>
+                    </div>
+                    <span class="inline-flex items-center rounded-full bg-amber-100 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-amber-900">Action Required</span>
                   </div>
-                  <span id="step-1-status" class="w-fit rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-950">Action required</span>
+                  <p class="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-2 text-xs leading-5 text-amber-800">
+                    <strong class="font-bold">Simulation note:</strong> This step represents the verification of core personal details before the base allowance can be released.
+                  </p>
+                  <div class="mt-4">
+                    <button id="btn-step-1" type="button" class="rounded-lg bg-blue-700 px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-200">
+                      Complete Task 1
+                    </button>
+                  </div>
                 </div>
-                <p class="mt-3 text-sm leading-6 text-slate-700">Verify core personal data in the official tax service to release the base allowance milestone of <strong>$1,500</strong>. This demo intentionally provides no form for entering that data.</p>
-                <button type="button" data-action="demo-verify" class="mt-4 rounded-lg bg-blue-800 px-4 py-2.5 text-sm font-bold text-white hover:bg-blue-950 focus:outline-none focus:ring-4 focus:ring-blue-200">Simulate completion</button>
-              </article>
+              </div>
             </li>
 
-            <li>
-              <article id="step-2" class="relative rounded-xl border border-slate-200 bg-slate-50 p-5 opacity-90">
-                <span aria-hidden="true" class="absolute -left-[2.05rem] top-5 flex h-7 w-7 items-center justify-center rounded-full bg-slate-400 text-sm font-bold text-white ring-4 ring-white">2</span>
-                <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                  <div>
-                    <p class="text-sm font-bold uppercase tracking-wide text-slate-600">Step 2 · $3,000</p>
-                    <h4 class="mt-1 text-lg font-bold text-slate-800">State tax credit allocation</h4>
+            <li id="step-2" class="relative opacity-60 pointer-events-none transition-opacity duration-200">
+              <div class="absolute left-4 top-8 h-[calc(100%+1.25rem)] w-0.5 bg-slate-200" aria-hidden="true"></div>
+              <div class="flex gap-4">
+                <div id="icon-2" class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-slate-300 bg-white text-sm font-bold text-slate-400 ring-4 ring-white">2</div>
+                <div class="min-w-0 flex-1 rounded-xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
+                  <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <h3 class="text-base font-bold text-slate-900">Income Verification &amp; Credits Audit</h3>
+                      <p class="mt-1 text-xs font-bold uppercase tracking-wide text-slate-500">$3,000 Segment</p>
+                    </div>
+                    <span class="inline-flex items-center rounded-full bg-slate-200 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-slate-600">Locked</span>
                   </div>
-                  <span id="step-2-status" class="w-fit rounded-full bg-slate-200 px-3 py-1 text-xs font-bold text-slate-700">Locked</span>
+                  <p class="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-2 text-xs leading-5 text-amber-800">
+                    <strong class="font-bold">Simulation note:</strong> This staged credit release activates only after Task 1 is marked complete.
+                  </p>
+                  <div class="mt-4 hidden" id="box-step-2">
+                    <button id="btn-step-2" type="button" class="rounded-lg bg-blue-700 px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-200">
+                      Complete Task 2
+                    </button>
+                  </div>
                 </div>
-                <p class="mt-3 text-sm leading-6 text-slate-600">After Step 1 is complete, the simulated workflow allocates state-level deductions and credits totaling <strong>$3,000</strong>.</p>
-              </article>
+              </div>
             </li>
 
-            <li>
-              <article id="step-3" class="relative rounded-xl border border-slate-200 bg-slate-50 p-5 opacity-90">
-                <span aria-hidden="true" class="absolute -left-[2.05rem] top-5 flex h-7 w-7 items-center justify-center rounded-full bg-slate-400 text-sm font-bold text-white ring-4 ring-white">3</span>
-                <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                  <div>
-                    <p class="text-sm font-bold uppercase tracking-wide text-slate-600">Step 3 · $7,600</p>
-                    <h4 class="mt-1 text-lg font-bold text-slate-800">Final treasury clearance</h4>
+            <li id="step-3" class="relative opacity-60 pointer-events-none transition-opacity duration-200">
+              <div class="flex gap-4">
+                <div id="icon-3" class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-slate-300 bg-white text-sm font-bold text-slate-400 ring-4 ring-white">3</div>
+                <div class="min-w-0 flex-1 rounded-xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
+                  <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <h3 class="text-base font-bold text-slate-900">Final Treasury Clearance</h3>
+                      <p class="mt-1 text-xs font-bold uppercase tracking-wide text-slate-500">$7,600 Cumulative Total</p>
+                    </div>
+                    <span class="inline-flex items-center rounded-full bg-slate-200 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-slate-600">Locked</span>
                   </div>
-                  <span id="step-3-status" class="w-fit rounded-full bg-slate-200 px-3 py-1 text-xs font-bold text-slate-700">Locked</span>
+                  <p class="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-2 text-xs leading-5 text-amber-800">
+                    <strong class="font-bold">Simulation note:</strong> This final stage demonstrates the account settlement process after prior verification steps are complete.
+                  </p>
+                  <div class="mt-4 hidden" id="box-step-3">
+                    <button id="btn-step-3" type="button" class="rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200">
+                      Finalize Processing
+                    </button>
+                  </div>
                 </div>
-                <p class="mt-3 text-sm leading-6 text-slate-600">After Step 2 is complete, the simulated workflow triggers the final release of the combined <strong>$7,600</strong>. No bank-account information is requested or stored by this demo.</p>
-              </article>
+              </div>
             </li>
           </ol>
-          <p id="live-message" class="mt-4 min-h-6 text-sm font-semibold text-emerald-800" role="status" aria-live="polite"></p>
-        </section>
-      </div>
-    </section>
-  </main>
 
-  <footer class="mx-auto max-w-5xl px-4 pb-8 text-center text-xs leading-5 text-slate-600 sm:px-6 lg:px-8">
-    Fictional UI demo. Never submit sensitive tax or banking information to an unverified website.
-  </footer>
+          <p id="status-message" class="mt-5 min-h-[1.25rem] text-sm font-semibold text-emerald-800" aria-live="polite"></p>
+        </section>
+      </main>
+    </div>
+  </div>
 
   <script>
-    (() => {
-      const button = document.querySelector('[data-action="demo-verify"]');
-      const message = document.querySelector('#live-message');
-      const step1Status = document.querySelector('#step-1-status');
-      const step2Status = document.querySelector('#step-2-status');
-      const step3Status = document.querySelector('#step-3-status');
-      const step2 = document.querySelector('#step-2');
-      const step3 = document.querySelector('#step-3');
+    const globalStatus = document.getElementById('global-status');
+    const statusMessage = document.getElementById('status-message');
 
-      button.addEventListener('click', () => {
-        button.disabled = true;
-        button.textContent = 'Completed in demo';
-        button.classList.add('cursor-not-allowed', 'bg-emerald-700');
-        button.classList.remove('bg-blue-800', 'hover:bg-blue-950');
-        step1Status.textContent = 'Complete';
-        step1Status.className = 'w-fit rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-950';
-        step2Status.textContent = 'Available in demo';
-        step2Status.className = 'w-fit rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-950';
-        step3Status.textContent = 'Locked';
-        step2.classList.remove('bg-slate-50', 'opacity-90');
-        step2.classList.add('border-blue-300', 'bg-blue-50');
-        message.textContent = 'Demo update: Step 1 is complete. Step 2 is now available.';
-      });
+    function setGlobalStatus(text, classes) {
+      globalStatus.innerHTML = '<span aria-hidden="true" class="mr-2 text-base">●</span>' + text;
+      globalStatus.className = 'inline-flex items-center rounded-full px-3 py-1.5 text-sm font-bold ' + classes;
+    }
 
-      step2.addEventListener('click', () => {
-        if (!button.disabled) return;
-        step2Status.textContent = 'Complete in demo';
-        step2Status.className = 'w-fit rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-950';
-        step3Status.textContent = 'Available in demo';
-        step3Status.className = 'w-fit rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-950';
-        step3.classList.remove('bg-slate-50', 'opacity-90');
-        step3.classList.add('border-blue-300', 'bg-blue-50');
-        message.textContent = 'Demo update: Step 2 is complete. Step 3 is now available.';
-      });
-    })();
+    function completeTask1() {
+      const icon = document.getElementById('icon-1');
+      const stepCard = document.getElementById('step-1');
+      const btn = document.getElementById('btn-step-1');
+
+      icon.textContent = '✓';
+      icon.className = 'relative z-10 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500 text-sm font-bold text-white ring-4 ring-white';
+      btn.disabled = true;
+      btn.textContent = 'Completed';
+      btn.className = 'rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-sm cursor-default';
+      stepCard.querySelector('span').className = 'inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-emerald-900';
+      stepCard.querySelector('span').textContent = 'Verified';
+
+      const step2 = document.getElementById('step-2');
+      step2.classList.remove('opacity-60', 'pointer-events-none');
+      document.getElementById('box-step-2').classList.remove('hidden');
+      document.getElementById('icon-2').className = 'relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-blue-700 bg-white text-sm font-bold text-blue-700 ring-4 ring-white animate-pulse';
+      statusMessage.textContent = 'Step 1 complete. Step 2 is now available.';
+    }
+
+    function completeTask2() {
+      const icon = document.getElementById('icon-2');
+      const btn = document.getElementById('btn-step-2');
+      const stepCard = document.getElementById('step-2');
+
+      icon.textContent = '✓';
+      icon.className = 'relative z-10 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500 text-sm font-bold text-white ring-4 ring-white';
+      btn.disabled = true;
+      btn.textContent = 'Completed';
+      btn.className = 'rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-sm cursor-default';
+      stepCard.querySelector('span').className = 'inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-emerald-900';
+      stepCard.querySelector('span').textContent = 'Verified';
+
+      const step3 = document.getElementById('step-3');
+      step3.classList.remove('opacity-60', 'pointer-events-none');
+      document.getElementById('box-step-3').classList.remove('hidden');
+      document.getElementById('icon-3').className = 'relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-blue-700 bg-white text-sm font-bold text-blue-700 ring-4 ring-white animate-pulse';
+      statusMessage.textContent = 'Step 2 complete. Step 3 is now available.';
+    }
+
+    function completeTask3() {
+      const icon = document.getElementById('icon-3');
+      const btn = document.getElementById('btn-step-3');
+      const stepCard = document.getElementById('step-3');
+
+      icon.textContent = '✓';
+      icon.className = 'relative z-10 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500 text-sm font-bold text-white ring-4 ring-white';
+      btn.disabled = true;
+      btn.textContent = 'Finalized';
+      btn.className = 'rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-sm cursor-default';
+      stepCard.querySelector('span').className = 'inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-emerald-900';
+      stepCard.querySelector('span').textContent = 'Verified';
+
+      setGlobalStatus('Approved', 'bg-emerald-100 text-emerald-900');
+      statusMessage.textContent = 'All simulation steps complete. The refund has reached the approved state.';
+    }
+
+    document.getElementById('btn-step-1').addEventListener('click', completeTask1);
+    document.getElementById('btn-step-2').addEventListener('click', completeTask2);
+    document.getElementById('btn-step-3').addEventListener('click', completeTask3);
   </script>
 </body>
 </html>
