@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rhode Island State & IRS Tax Refund Tracker</title>
+  <title>Rhode Island Tax Refund Tracker</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-slate-100 text-slate-800 antialiased">
@@ -16,16 +16,17 @@
       <header class="border-b border-amber-200 bg-amber-50 px-5 py-4 text-center sm:px-8">
         <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-amber-800">Educational Simulation Only</p>
         <p class="mt-1 text-xs leading-5 text-amber-700">
-          This is a non-functional demo interface. It does not process live records, collect personal data, or connect to any state network.
+          This is a non-functional demo interface. It does not process real records, collect personal information, or connect to any official state network.
         </p>
       </header>
 
       <main id="main-content" class="p-5 sm:p-8">
         <div class="mb-7 flex flex-col gap-4 border-b border-slate-200 pb-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Sample Record • Tax Year 2026</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Sample record • Tax year 2026</p>
             <h1 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">Rhode Island Tax Refund Tracker</h1>
           </div>
+
           <span id="global-status" class="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1.5 text-sm font-bold text-emerald-900">
             <span aria-hidden="true" class="mr-2 text-base">●</span>
             Approved
@@ -34,15 +35,18 @@
 
         <section aria-labelledby="milestone-heading" class="mb-8">
           <h2 id="milestone-heading" class="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Refund Breakdown</h2>
+
           <div class="grid gap-3 sm:grid-cols-3">
             <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <p class="text-xs font-medium uppercase tracking-wide text-slate-500">Initial Milestone</p>
               <p class="mt-2 text-2xl font-extrabold text-slate-900">$1,500</p>
             </div>
+
             <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <p class="text-xs font-medium uppercase tracking-wide text-slate-500">Processing Credit</p>
               <p class="mt-2 text-2xl font-extrabold text-slate-900">$3,000</p>
             </div>
+
             <div class="rounded-xl border-2 border-blue-700 bg-blue-50 p-4">
               <p class="text-xs font-bold uppercase tracking-wide text-blue-900">Total Approved</p>
               <p class="mt-2 text-2xl font-extrabold text-blue-950">$7,600</p>
@@ -58,8 +62,10 @@
           <ol class="space-y-5">
             <li id="step-1" class="relative">
               <div class="absolute left-4 top-8 h-[calc(100%+1.25rem)] w-0.5 bg-slate-200" aria-hidden="true"></div>
+
               <div class="flex gap-4">
                 <div id="icon-1" class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full bg-blue-700 text-sm font-bold text-white ring-4 ring-white">1</div>
+
                 <div class="min-w-0 flex-1 rounded-xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
                   <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
@@ -68,9 +74,11 @@
                     </div>
                     <span class="inline-flex items-center rounded-full bg-amber-100 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-amber-900">Action Required</span>
                   </div>
+
                   <p class="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-2 text-xs leading-5 text-amber-800">
-                    <strong class="font-bold">Simulation note:</strong> This step represents the verification of core personal details before the base allowance can be released.
+                    <strong class="font-bold">Simulation note:</strong> This step represents the verification of foundational information before the base allowance can be released.
                   </p>
+
                   <div class="mt-4">
                     <button id="btn-step-1" type="button" class="rounded-lg bg-blue-700 px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-200">
                       Complete Task 1
@@ -82,8 +90,10 @@
 
             <li id="step-2" class="relative opacity-60 pointer-events-none transition-opacity duration-200">
               <div class="absolute left-4 top-8 h-[calc(100%+1.25rem)] w-0.5 bg-slate-200" aria-hidden="true"></div>
+
               <div class="flex gap-4">
                 <div id="icon-2" class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-slate-300 bg-white text-sm font-bold text-slate-400 ring-4 ring-white">2</div>
+
                 <div class="min-w-0 flex-1 rounded-xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
                   <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
@@ -92,9 +102,11 @@
                     </div>
                     <span class="inline-flex items-center rounded-full bg-slate-200 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-slate-600">Locked</span>
                   </div>
+
                   <p class="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-2 text-xs leading-5 text-amber-800">
-                    <strong class="font-bold">Simulation note:</strong> This staged credit release activates only after Task 1 is marked complete.
+                    <strong class="font-bold">Simulation note:</strong> This staged credit release becomes active only after Step 1 is marked complete.
                   </p>
+
                   <div class="mt-4 hidden" id="box-step-2">
                     <button id="btn-step-2" type="button" class="rounded-lg bg-blue-700 px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-200">
                       Complete Task 2
@@ -107,6 +119,7 @@
             <li id="step-3" class="relative opacity-60 pointer-events-none transition-opacity duration-200">
               <div class="flex gap-4">
                 <div id="icon-3" class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-slate-300 bg-white text-sm font-bold text-slate-400 ring-4 ring-white">3</div>
+
                 <div class="min-w-0 flex-1 rounded-xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
                   <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
@@ -115,9 +128,11 @@
                     </div>
                     <span class="inline-flex items-center rounded-full bg-slate-200 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-slate-600">Locked</span>
                   </div>
+
                   <p class="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-2 text-xs leading-5 text-amber-800">
-                    <strong class="font-bold">Simulation note:</strong> This final stage demonstrates the account settlement process after prior verification steps are complete.
+                    <strong class="font-bold">Simulation note:</strong> This final stage demonstrates the closing of the process after prior verification milestones are complete.
                   </p>
+
                   <div class="mt-4 hidden" id="box-step-3">
                     <button id="btn-step-3" type="button" class="rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200">
                       Finalize Processing
